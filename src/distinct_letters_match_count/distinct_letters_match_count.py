@@ -2,7 +2,7 @@
 """
     It returns count of the minimum number of letters
     that could be deleted from a given string to create
-    a new one in which no two letters occur the same number of times
+    a new one in which every letter occurs a unique number of times
 """
 
 
@@ -13,7 +13,7 @@ def distinct_letters_match_count(sequence):
     '''
         It returns count of the minimum number of letters
         that could be deleted from a given string to create
-        a new one in which no two letters occur the same number of times
+        a new one in which every letter occurs a unique number of times
     '''
 
     letter_counter = dict([(k[0], 0) for k in sequence])
@@ -47,5 +47,5 @@ if __name__ == '__main__':
     if len(sys.argv) == 2:
         WORD = sys.argv[1]
     else:
-        WORD = 'aaabbbccc'
+        WORD = 'aabb'
     print(distinct_letters_match_count(WORD))
